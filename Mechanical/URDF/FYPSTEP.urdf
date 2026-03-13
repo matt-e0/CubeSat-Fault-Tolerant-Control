@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="FYPSTEP">
+    <link name="Component24">
+        <inertial>
+            <origin xyz="0.024778929265476483 0.01358847674705627 0.024749238958771885" rpy="0.0 0.0 0.0" />
+            <mass value="0.08707568321144665" />
+            <inertia ixx="6.802072810697727e-05" iyy="0.00010595150186318194" izz="6.801448308761863e-05" ixy="-3.339804086079475e-08" iyz="-1.4312952361884227e-08" ixz="2.122187505880415e-08" />
+        </inertial>
+        <visual name="Component24_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Component24.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component24_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/Component24.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Component2">
+        <inertial>
+            <origin xyz="-0.0015448778670834418 0.0007093517731754351 -0.0016236316179086164" rpy="0.0 -2.7755575615628914e-17 2.7755575615628914e-17" />
+            <mass value="0.013991570671585008" />
+            <inertia ixx="1.506873944452866e-06" iyy="1.2974399382832934e-06" izz="1.5287114398049686e-06" ixy="-1.1325547808846402e-07" iyz="-1.306136846512623e-07" ixz="2.7039825575356107e-07" />
+        </inertial>
+        <visual name="Component2_visual">
+            <origin xyz="-0.008240496234712876 0.017432767989588628 -0.026178562846454503" rpy="1.323678495193453 -0.6360601938038368 1.9231755473926426" />
+            <geometry>
+                <mesh filename="meshes/Component2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component2_collision">
+            <origin xyz="-0.008240496234712876 0.017432767989588628 -0.026178562846454503" rpy="1.323678495193453 -0.6360601938038368 1.9231755473926426" />
+            <geometry>
+                <mesh filename="meshes/Component2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Component8">
+        <inertial>
+            <origin xyz="0.0016467559994151927 0.0011823844040432796 -0.0011900327095250118" rpy="-5.551115123125783e-17 -2.7755575615628907e-17 0.0" />
+            <mass value="0.013991570671585003" />
+            <inertia ixx="1.5358832093457694e-06" iyy="1.3927085436102004e-06" izz="1.40443356959364e-06" ixy="2.1607327548061658e-07" iyz="-1.4845594088407125e-07" ixz="-2.1038111645499447e-07" />
+        </inertial>
+        <visual name="Component8_visual">
+            <origin xyz="-0.036310507313330284 -0.037453424577939314 -0.044976368983692006" rpy="1.3207230449431049 0.12348712068798122 2.266430862590045" />
+            <geometry>
+                <mesh filename="meshes/Component8.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component8_collision">
+            <origin xyz="-0.036310507313330284 -0.037453424577939314 -0.044976368983692006" rpy="1.3207230449431049 0.12348712068798122 2.266430862590045" />
+            <geometry>
+                <mesh filename="meshes/Component8.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Component11">
+        <inertial>
+            <origin xyz="0.0007609341391528801 -0.0009596943754211207 -0.0020064924157850127" rpy="0.0 -0.0 0.0" />
+            <mass value="0.013991570671585013" />
+            <inertia ixx="1.3139596122002363e-06" iyy="1.3403321400027215e-06" izz="1.6787335703377012e-06" ixy="-7.380763147697763e-08" iyz="2.1245987727543512e-07" ixz="-1.653511617499618e-07" />
+        </inertial>
+        <visual name="Component11_visual">
+            <origin xyz="-0.025486986100240434 -0.046462137696288534 0.008723585142581806" rpy="2.186276035465306 -0.5235987755982988 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Component11.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component11_collision">
+            <origin xyz="-0.025486986100240434 -0.046462137696288534 0.008723585142581806" rpy="2.186276035465306 -0.5235987755982988 3.141592653589793" />
+            <geometry>
+                <mesh filename="meshes/Component11.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="Component14">
+        <inertial>
+            <origin xyz="-0.0010130887929883947 0.001891743263854737 -0.0009596907342130745" rpy="0.0 -0.0 -5.551115123125783e-17" />
+            <mass value="0.013991570671585013" />
+            <inertia ixx="1.3576827703257965e-06" iyy="1.6351169192579727e-06" izz="1.3402256329550903e-06" ixy="-2.0328961028788456e-07" iyz="-1.952926256411908e-07" ixz="1.1165955205569278e-07" />
+        </inertial>
+        <visual name="Component14_visual">
+            <origin xyz="0.04703701409063582 0.022217917031141322 -0.013873063820485938" rpy="0.006552752859929885 0.6089119161994604 2.948516165831998" />
+            <geometry>
+                <mesh filename="meshes/Component14.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="Component14_collision">
+            <origin xyz="0.04703701409063582 0.022217917031141322 -0.013873063820485938" rpy="0.006552752859929885 0.6089119161994604 2.948516165831998" />
+            <geometry>
+                <mesh filename="meshes/Component14.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Component24_Revolute-5" type="continuous">
+        <origin xyz="0.0438408025845269 0.03095278141936995 0.005715408682486371" rpy="0.13777758436299894 -0.6834710073589554 -2.6985518189202016" />
+        <parent link="Component24" />
+        <child link="Component14" />
+        <axis xyz="0.43096420533394075 -0.8047374789152502 0.40824810011806845" />
+    </joint>
+    <joint name="Component24_Revolute-6" type="continuous">
+        <origin xyz="0.005715406455963006 0.030952774762175207 0.005715404729579875" rpy="2.5625021137337276 -1.3749547065459407 1.100662368692085" />
+        <parent link="Component24" />
+        <child link="Component2" />
+        <axis xyz="0.657187148355879 -0.3017555244903678 0.6906875310336874" />
+    </joint>
+    <joint name="Component24_Revolute-7" type="continuous">
+        <origin xyz="0.005715413944402381 0.030952777187464635 0.043840803096114184" rpy="2.4619039235801923 -0.9513802152210648 2.3594416385574255" />
+        <parent link="Component24" />
+        <child link="Component11" />
+        <axis xyz="-0.32369740126877694 0.4082484167958815 0.8535536547244682" />
+    </joint>
+    <joint name="Component24_Revolute-8" type="continuous">
+        <origin xyz="0.043840806537432365 0.03095277476217646 0.043840804811051896" rpy="0.6506579633373287 -0.9242262556709183 -1.9101162712199424" />
+        <parent link="Component24" />
+        <child link="Component8" />
+        <axis xyz="-0.7005231708600427 -0.502982531775134 0.5062357238088475" />
+    </joint>
+</robot>
