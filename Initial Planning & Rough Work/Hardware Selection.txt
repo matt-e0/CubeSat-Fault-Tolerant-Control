@@ -1,0 +1,51 @@
+The hardware selection for the ADCS is more simplified than that of the reaction wheel
+
+The required components are a MCU to receive data from sensors and send control signals to the motors, and a Inertial Measurement Unit (IMU) featuring a gyroscope and accelerometer for full 6 axis control.
+The addition of a 3 axis magnetometer could be considered for further orientation data (especially if magnetorquers are added) but is not strictly necessary for the reaction wheels.
+Of course due to the nature of the application, the smaller the footprint and power requirement of the controller, the better
+
+MCU:
+Teensy 4.0
+
+The MCU used must be relatively low power (nothing crazy like a raspberry pi 5) and must be able to perform sensor fusion calculations and process the attitude using quaternions, control system... etc
+IN REAL TIME. Active stabilization or tracking requires that the control hardware is able to receive an input, calculate the current attitude and generate a control signal without significant delay.
+
+The Teensy 4.0 MCU features an ARM Cortex-M7 at 600Mhz, with ARM's Float Point Math Unit built in. The combination of the incredibly high clockspeed and the FPU allow the processor to perform these 
+real-time calculations without any issue and allows for extra room for any further development. (E.g. using quarternions, adaptive/redundant control)
+
+The Teensy itself is very compact, even for a microcontroller, and its incredible power allows it to make use of a real time operating system. The 4.0 model offers 2MByte of flash (plenty of memory)
+and enough IO to comfortably interface with the motors, hall encoders and IMU, with enough extra pins to interface with the main CubeSat electronics and another sensor.
+
+It can be programmed in C++ with tools like the ArduinoIDE or PlatformIO, which in turn allows it access to sensor libraries, further simplifying the development of the ADCS without constraining it
+to any specific function.
+
+Though more expensive than most MCU, like Arduino models or some STM32 boards, the Teensy is still pretty affordable for such a high performance MCU
+
+IMU:
+ISM330DHCX
+
+The requirements for the IMU at minimum are to feature a 3 axis gyroscope and a 3 axis accelerometer for a full 6 axis. The gyroscope measures angular velocity in the 3 axis, the accelerometer 
+measures linear acceleration. An angle can be determined from both sensors, however gyroscopes are prone to drift, which overtime introduces a large error, making the system unstable.
+On the other hand acclerometers have a relatively low drift, but produce very noisy outputs, giving unstable control. The data from each of these sensors can be combined using sensor fusion,
+in order to take advantage of the low drift of the accelerometer and accurate angle of the gyroscope, producing a stable output. This will be obtained using a filter (most likely a Kalman Filter).
+
+An ideal IMU will limit Gyro Bias Instability (the drift of the gyroscope), Gyro Noise Density and Accel Noise Density. A good IMU will also have good temperature stability and max ODR (response rate).
+The ISM330DHCX offers:
+~3 °/hr Gyro Bias Instability - This is excellent, most off the shelf IMUs are ~15–20 °/hr     * Needs citation
+~0.0038 °/s/√Hz Gyro Noise Density - Also quite good compared to similar IMUs
+~60 µg/√Hz Accel Noise Density - Roughly half compared to similar IMUs
+6.6kHz Max ODR (Gyro) - Fast, good for Real Time OS
+±125 to ±4000 °/s, ±2g to ±16g Full scale range
+
+With no sensor fusion - good for original filter design
+3V3 logic interface
+SPI serial interface - Ideal for space applications * Citiation
+Embedded temperature sensor, self test and temperature compensation
+High shock survivabilty
+
++ Additional Component
+Logic Level Converter:
+Sparkfun BOB-12009
+
+Since the Teensy 4.0 operates on a 3V3 logic for all of its input and output pins, a logic level converter is needed to convert the pwm signal going from the Teensy from 3V3 to 5V at the input of the ESC.
+This model is cheap, offers 3V3 to 5V (and 5v to 3V3 if needed) conversion and has a very small footprint. It can also be powered from 5V or directly from the 2S supply.

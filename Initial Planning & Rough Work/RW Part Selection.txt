@@ -1,0 +1,35 @@
+Part Selection
+
+Motor:
+Emax Eco 1404 High Efficiency Micro Motor (6000Kv)
+
+This motor satisfies the requirements for a brushless DC (BLDC) motor that offers great performance at a cheap price.
+A BLDC motor was ideal for the reaction wheels as brushed motors encounter arcing issues in the vacuum of space. This degrades performance and can destroy the motor.
+Most commercial BLDC motors smaller than 4cm long are very expensive, £100+, and offer limited performance.
+The disadvantages of using a commercial drone BLDC motor is the lack of encoder and the relatively high power draw. The latter can be dealt with by limiting the motor speed/current.
+An encoder can be built into the flywheel of the reaction wheel, using either an optical or magnetic encoder.
+
++ Additional Part:
+ESC:
+DYS XSD BLHeli_S Dshot 300/60
+
+This is a general purpose ESC for brushless motors, the 12A option is sufficient to drive an Emax Eco 1404 at 2S power. Most importantly it's incredibly compact and quite cheap.
+It will be driven by pwm and due to its nature it can be replaced by similar, higher quality components in the future, if need be.
+
++ Additional Part:
+Encoder: 
+US5881 Unipolar Hall Switch
+Low Sensitivity
+
+Since each BLDC motor is rated at 6000Kv and powered using a 2S battery, 6000Kv * 7.4V = 44,400 rpm
+44,400 rpm = 740Hz (4649.557122 rad/s)
+In reality this is the no-load rotational speed and will be much lower when spinning a flywheel
+Regardless the encoder should be able to measure a rotation roughly every 1ms (<0.5ms to detect change in state) 
+
+A hall effect sensor and magnet has been chosen over an optical encoder as optical encoders may encounter issues with dust or particulate matter in space.
+A traditional hall sensor is also much smaller than rotational magnetic encoders, allowing the whole reaction wheel unit to stay roughly the sum volume of the motor and flywheel.
+Additionally, most magnetic rotary encoders feature a serial or i2c interface, which may take up valuable pins on the MCU. A simple hall switch requires only
+
+The US5881 is a few millimeters wide and has a maximum switching frequency of 10kHz. The flywheel of each RW can then house a small neodymium magnet with the US5881 mounted to the RW enclosure.
+
+
