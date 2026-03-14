@@ -6,8 +6,8 @@ MATLAB and Simulink implementations of the Adaptive Sliding Mode Controller. All
 
 | File | Description |
 |------|-------------|
-| `ASMC_waypoints.m` | Main ASMC simulation — attitude regulation with waypoints, fault injection, and performance plots |
-| `ASMC_tracking.m` | MATLAB Function block implementation for Simulink integration |
+| `ASMC_waypoints.m` | Main ASMC simulation - attitude regulation with waypoints, fault injection, and performance plots |
+| `ASMC_tracking.m` | Secondary ASMC simulation - demonstrates tracking a moving point |
 | `cubesatVisualisation.m` | Render and plots of ASMC simulations, requiring the controller simulation and mesh files |
 | `meshes` | Mesh files used for 3D simulation renders |
 
