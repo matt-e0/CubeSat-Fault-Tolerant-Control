@@ -1,15 +1,71 @@
-# CubeSat-Fault-Tolerant-Control
+# Fault-Tolerant CubeSat Attitude Control
 
-This is a repository for my final year project focused on the design of a fault-tolerant attitude control system for CubeSats. Specifically, it aims to deliver an over-actuated reaction wheel system, allowing for fault-tolerant control of a small CubeSat. It will achieve this through the use of reaction wheels. These are motor driven flywheels that generate angular momentum in order to rotate an object through conservation of momentum. The project should be able to demonstrate attitude control along a commanded axis in the event of failure in one reaction wheel or degradation of performance.
+**Author:** Matteo Venuti | University of Liverpool  
+**Supervisor:** Dr Barry Smith | **Assessor:** Dr Simon Maher
+
+---
+
+A fault-tolerant attitude control system for 1U CubeSat compartments, using four reaction wheels in a pyramid configuration controlled by an Adaptive Sliding Mode Controller (ASMC). The system maintains full three-axis attitude control following single or multiple wheel failures — with no manual retuning or fault detection logic required.
+
 <p align="center">
-  <img src="Resources/1000039267.jpg" alt="Complete hardware assembly" width="60%"/>
+  <img src="Resources/1000039267.jpg" width="500"/>
+  <br/>
+  <em>Complete hardware assembly</em>
 </p>
 
-The project was developed in four major stages: Specifications and Reaction Wheel Design, Control Theory and Simulation, Hardware Prototype Fabrication and Performance Evaluation. The attitude control system uses four reaction wheels mounted in a pyramid configuration to achieve redundant control. Each reaction wheel is driven with a specialised ESC that uses encoder feedback and FOC for closed and/or open loop control. At the heart of the system is a Teensy 4.1 microcontroller that runs the Adaptive Sliding Mode Controller, interfacing with a BNO-055 IMU for orientation data and micro SD card to log experimental data. The picture below shows the hardware prototype open, with the reaction wheels and electronics exposed.
+## Overview
+
+Reaction wheels generate torques by accelerating or decelerating flywheels, rotating the satellite through conservation of angular momentum. Four wheels are arranged in a pyramid (tetrahedron) configuration, providing a redundant fourth actuator. When a wheel fails, the adaptive gain in the controller increases automatically to compensate — distributing torque across the remaining wheels via a pseudoinverse allocation matrix.
 
 <p align="center">
-  <img src="Resources/1000038925.jpg" alt="Open view of hardware demo" width="40%"/>
+  <img src="Resources/1000038925.jpg" width="500"/>
+  <br/>
+  <em>Internal hardware — reaction wheels and electronics exposed</em>
 </p>
+
+## Key Results
+
+- Attitude regulation within **5°** following sequential failure of two reaction wheels
+- Adaptive gain responds automatically to fault — no controller reconfiguration needed
+- Lyapunov-stable convergence demonstrated in simulation
+- Hardware: bidirectional ESC firmware implemented from scratch on STM32 B-G431B
+
 <p align="center">
-  <img src="Resources/CrowdFundingGif.gif" alt="Simulink demo with PD controller" />
+  <img src="Resources/CrowdFundingGif.gif" width="600"/>
+  <br/>
+  <em>Simulink simulation — attitude tracking with PD controller baseline</em>
 </p>
+
+## Repository Structure
+
+| Folder | Contents |
+|--------|----------|
+| [`Simulation/`](Simulation/) | MATLAB ASMC simulation, Simulink models, plotting scripts |
+| [`Firmware/`](Firmware/) | STM32 ESC firmware modifications (see license notice) |
+| [`Controller/`](Controller/) | Teensy 4.1 ASMC implementation |
+| [`Mechanical/`](Mechanical/) | CAD files, reaction wheel design |
+| [`Documents/`](Documents/) | Poster, reports, references |
+| [`Initial Planning & Rough Work/`](Initial%20Planning%20%26%20Rough%20Work/) | Early designs, derivations, notes |
+
+## Hardware
+
+| Component | Part |
+|-----------|------|
+| Microcontroller | Teensy 4.1 |
+| IMU | Bosch BNO055 (quaternion output, 100Hz) |
+| Motor driver | STM32 B-G431B ESC1 × 4 |
+| Motors | BLDC with magnetic encoder |
+| Power | 3S LiPo (9.6–12.6V) |
+| Structure | 3D printed PLA, aluminium flywheels |
+
+## Controller Summary
+
+The ASMC drives the sliding surface `s = e_ω + λ·e_q` to zero using a PD feedback term and an adaptive switching term. The switching gain `K` updates online — growing when the system deviates from the surface (e.g. after a fault) and decaying upon convergence. This eliminates the fixed-gain trade-off between disturbance rejection and actuator chattering.
+
+```
+s = e_omega + lambda * e_q
+tau = J*(-Kp*e_q - Kd*e_omega) - J*K_adapt*sat(s/phi) - omega × (J*omega)
+K_adapt_dot = Gamma*||s|| - sigma*(K_adapt - K_min)
+```
+
+See [`Simulation/`](Simulation/) for full implementation and results.
