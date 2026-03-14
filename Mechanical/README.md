@@ -12,10 +12,22 @@ CAD files and design documentation for the reaction wheel assembly. All structur
 
 The reaction wheel module is designed to fit within a 1U (100×100×100mm) CubeSat compartment. Four wheels are mounted in a pyramid (tetrahedron) configuration - each wheel's spin axis is tilted at approximately 54.7° from the body Z axis, with the four axes evenly distributed around Z.
 
+<p align="center">
+  <img src="/Resources/Screenshot 2026-03-14 223140.png" width="500"/>
+  <br/>
+  <em>CAD Render of CubeSat 1U compartment</em>
+</p>
+
 This arrangement ensures:
 - Full three-axis torque authority from four wheels
 - Redundancy - any single wheel failure leaves the remaining three capable of full 3-axis control
 - Equal torque distribution across all axes (condition number of allocation matrix = 2.41)
+
+<p align="center">
+  <img src="/Resources/Screenshot 2026-03-14 223248.png" width="500"/>
+  <br/>
+  <em>CAD Render of CubeSat 1U compartment</em>
+</p>
 
 ## Wheel inertia
 
