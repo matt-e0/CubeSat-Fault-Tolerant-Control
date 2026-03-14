@@ -13,6 +13,12 @@ MATLAB and Simulink implementations of the Adaptive Sliding Mode Controller. All
 
 ## Running the simulation
 
+<p align="center">
+  <img src="Resources/SimulationPlot.gif" width="600"/>
+  <br/>
+  <em>ASMC simulation — attitude tracking (180 degree)</em>
+</p>
+
 1. Open MATLAB (R2021a or later)
 2. Run `ASMC_waypoints.m` 
 3. Adjust parameters at the top of the file:
@@ -35,25 +41,19 @@ The simulation runs for 80 seconds, injecting wheel failures mid-run and logging
 - Adaptive gain `K_adapt`
 - Quaternion components
 
-## Simulink integration
+## Simulation Viewer
 
-`asmc_simulink.m` is designed as a drop-in MATLAB Function block:
+`cubesatVisualisation.m` is designed to render a view of the ASMC simulation:
 
-| Port | Name | Size | Description |
-|------|------|------|-------------|
-| In1 | `q` | 4×1 | Current quaternion (scalar-first) |
-| In2 | `q_d` | 4×1 | Desired quaternion |
-| In3 | `omega` | 3×1 | Angular velocity (rad/s) |
-| Out1 | `tau_body` | 3×1 | Body torque demand (N·m) |
+<p align="center">
+  <img src="Resources/SimulationRender.gif" width="600"/>
+  <br/>
+  <em>ASMC simulation — attitude tracking (180 degree)</em>
+</p>
 
-Set `q_d` using a Constant block. Common values:
-
-```matlab
-[1; 0; 0; 0]              % Identity — no rotation
-[cos(pi/4); sin(pi/4); 0; 0]  % 90° about X
-[cos(pi/4); 0; sin(pi/4); 0]  % 90° about Y
-[cos(pi/4); 0; 0; sin(pi/4)]  % 90° about Z
-```
+1. Run `ASMC_waypoints.m` 
+2. Parameters are stored locally
+3. Run `cubesatVisualisation.m` from the same file
 
 ## Key parameters
 
