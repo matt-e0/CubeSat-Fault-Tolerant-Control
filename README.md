@@ -74,4 +74,6 @@ K_adapt_dot = Gamma*||s|| - sigma*(K_adapt - K_min)
 
 See the 'Simulation' folder for full implementation and results.
 
-### This project was done with the support of the University of Liverpool and the School of Engineering
+## Acknowledgements
+
+This project was completed as part of a BEng project at the University of Liverpool, School of Electrical Engineering. 
