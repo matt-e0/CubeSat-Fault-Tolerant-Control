@@ -15,7 +15,7 @@ A fault-tolerant attitude control system for 1U CubeSat compartments, using four
 
 ## Overview
 
-Reaction wheels generate torques by accelerating or decelerating flywheels, rotating the satellite through conservation of angular momentum. Four wheels are arranged in a pyramid (tetrahedron) configuration, providing a redundant fourth actuator. When a wheel fails, the adaptive gain in the controller increases automatically to compensate — distributing torque across the remaining wheels via a pseudoinverse allocation matrix.
+Reaction wheels generate torques by accelerating or decelerating flywheels, rotating the satellite through conservation of angular momentum. Four wheels are arranged in a pyramid configuration, providing a redundant fourth actuator. When a wheel fails, the adaptive gain in the controller increases automatically to compensate — distributing torque across the remaining wheels via a pseudoinverse allocation matrix.
 
 <p align="center">
   <img src="Resources/1000038925.jpg" width="500"/>
