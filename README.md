@@ -72,4 +72,6 @@ tau = J*(-Kp*e_q - Kd*e_omega) - J*K_adapt*sat(s/phi) - omega × (J*omega)
 K_adapt_dot = Gamma*||s|| - sigma*(K_adapt - K_min)
 ```
 
-See [`Simulation/`](Simulation/) for full implementation and results.
+See the 'Simulation' folder for full implementation and results.
+
+### This project was done with the support of the University of Liverpool and the School of Engineering
