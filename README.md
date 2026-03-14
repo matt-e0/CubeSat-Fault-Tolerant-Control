@@ -5,7 +5,7 @@
 
 ---
 
-A fault-tolerant attitude control system for 1U CubeSat compartments, using four reaction wheels in a pyramid configuration controlled by an Adaptive Sliding Mode Controller (ASMC). The system maintains full three-axis attitude control following single or multiple wheel failures — with no manual retuning or fault detection logic required.
+A fault-tolerant attitude control system for 1U CubeSat compartments, using four reaction wheels in a pyramid configuration controlled by an Adaptive Sliding Mode Controller (ASMC). The system maintains full three-axis attitude control following single or multiple wheel failures with no manual retuning or fault detection logic required.
 
 <p align="center">
   <a href="https://github.com/user-attachments/assets/f2ae930a-9342-4874-bb6c-7ed893be482d">
