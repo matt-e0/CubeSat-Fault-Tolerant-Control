@@ -14,7 +14,7 @@ MATLAB and Simulink implementations of the Adaptive Sliding Mode Controller. All
 ## Running the simulation
 
 <p align="center">
-  <img src="Resources/SimulationPlot.gif" width="600"/>
+  <img src="Resources/SimulationPlot.gif"/>
   <br/>
   <em>ASMC simulation — attitude tracking (180 degree)</em>
 </p>
@@ -46,14 +46,15 @@ The simulation runs for 80 seconds, injecting wheel failures mid-run and logging
 `cubesatVisualisation.m` is designed to render a view of the ASMC simulation:
 
 <p align="center">
-  <img src="Resources/SimulationRender.gif" width="600"/>
+  <img src="Resources/SimulationRender.gif"/>
   <br/>
-  <em>ASMC simulation — attitude tracking (180 degree)</em>
+  <em>ASMC simulation in viewer</em>
 </p>
 
 1. Run `ASMC_waypoints.m` 
-2. Parameters are stored locally
-3. Run `cubesatVisualisation.m` from the same file
+2. Parameters are stored locally from ASMC simulation
+3. Ensure 'meshes' folder is present to load stl files
+4. Run `cubesatVisualisation.m` from the same file
 
 ## Key parameters
 
