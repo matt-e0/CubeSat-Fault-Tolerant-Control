@@ -47,6 +47,7 @@ Reaction wheels generate torques by accelerating or decelerating flywheels, rota
 | [`Simulation/`](Simulation/) | MATLAB ASMC simulation, Simulink models, plotting scripts |
 | [`Controller/`](Controller/) | Teensy 4.1 ASMC implementation |
 | [`Mechanical/`](Mechanical/) | CAD files, reaction wheel design |
+| [`Electrical/`](Electrical/) | Circuit overview, component selection |
 | [`Documents/`](Documents/) | Poster, reports, references |
 | [`Initial Planning & Rough Work/`](Initial%20Planning%20%26%20Rough%20Work/) | Early designs, derivations, notes |
 
