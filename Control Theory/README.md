@@ -1,6 +1,6 @@
 # Adaptive Sliding Mode Controller Design
 
-The at heart of the system is the Adaptive Sliding Mode Controller (ASMC). ASMC was chosen over traditional control methods due the requirements of fault-tolerance for the attitude control system.
+The at heart of the system is the Adaptive Sliding Mode Controller (ASMC). ASMC was chosen over traditional control methods due the requirements of fault-tolerance for the attitude control system. This section will outline the theory behind the controller and the proofs used to verify the stability of the system. 
 
 | Parameter | Description |
 |------------|-------------|
