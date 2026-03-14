@@ -17,18 +17,18 @@ A fault-tolerant attitude control system for 1U CubeSat compartments, using four
 
 ## Overview
 
-Reaction wheels generate torques by accelerating or decelerating flywheels, rotating the satellite through conservation of angular momentum. Four wheels are arranged in a pyramid configuration, providing a redundant fourth actuator. When a wheel fails, the adaptive gain in the controller increases automatically to compensate — distributing torque across the remaining wheels via a pseudoinverse allocation matrix.
+Reaction wheels generate torques by accelerating or decelerating flywheels, rotating the satellite through conservation of angular momentum. Four wheels are arranged in a pyramid configuration, providing a redundant fourth actuator. When a wheel fails, the adaptive gain in the controller increases automatically to compensate, distributing torque across the remaining wheels via a pseudoinverse allocation matrix.
 
 <p align="center">
   <img src="Resources/1000038925.jpg" width="500"/>
   <br/>
-  <em>Internal hardware — reaction wheels and electronics exposed</em>
+  <em>Internal hardware - reaction wheels and electronics exposed</em>
 </p>
 
 ## Key Results
 
 - Attitude regulation within **5°** following sequential failure of two reaction wheels
-- Adaptive gain responds automatically to fault — no controller reconfiguration needed
+- Adaptive gain responds automatically to fault - no controller reconfiguration needed
 - Lyapunov-stable convergence demonstrated in simulation
 - Hardware: bidirectional ESC firmware implemented from scratch on STM32 B-G431B
 
@@ -37,7 +37,7 @@ Reaction wheels generate torques by accelerating or decelerating flywheels, rota
 <p align="center">
   <img src="Resources/CrowdFundingGif.gif" width="600"/>
   <br/>
-  <em>Simulink simulation — attitude tracking with PD controller baseline</em>
+  <em>Simulink simulation - attitude tracking with PD controller baseline</em>
 </p>
 
 ## Repository Structure
@@ -63,7 +63,7 @@ Reaction wheels generate torques by accelerating or decelerating flywheels, rota
 
 ## Controller Summary
 
-The ASMC drives the sliding surface `s = e_ω + λ·e_q` to zero using a PD feedback term and an adaptive switching term. The switching gain `K` updates online — growing when the system deviates from the surface (e.g. after a fault) and decaying upon convergence. This eliminates the fixed-gain trade-off between disturbance rejection and actuator chattering.
+The ASMC drives the sliding surface `s = e_ω + λ·e_q` to zero using a PD feedback term and an adaptive switching term. The switching gain `K` updates online - growing when the system deviates from the surface (e.g. after a fault) and decaying upon convergence. This eliminates the fixed-gain trade-off between disturbance rejection and actuator chattering.
 
 ```
 s = e_omega + lambda * e_q
