@@ -24,6 +24,10 @@ A passive fault-isolating control method was chosen as the project is aimed to i
   <em>ASMC Design - Page 2</em>
 </p>
 
+## Lyapunov Proof
+
+In order to verify that the sliding mode controller is stable, the energy of the system is analysed using a Lyapunov Proof, in this case the Quadratic Function is chosen as the system dynamics aligns with the equation for rotational kinetic energy. By proving that the system's energy will decay, the controller is shown to be stable.
+
 <p align="center">
   <img src="/Resources/ControlTheory3.png" width="500"/>
   <br/>
