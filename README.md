@@ -30,7 +30,7 @@ Reaction wheels generate torques by accelerating or decelerating flywheels, rota
 - Lyapunov-stable convergence demonstrated in simulation
 - Hardware: bidirectional ESC firmware implemented from scratch on STM32 B-G431B
 
-video src="Resources/BenchDemo.mp4" width="320" height="240" controls></video>
+<video src="Resources/BenchDemo.mp4" width="320" height="240" controls></video>
 
 <p align="center">
   <img src="Resources/CrowdFundingGif.gif" width="600"/>
