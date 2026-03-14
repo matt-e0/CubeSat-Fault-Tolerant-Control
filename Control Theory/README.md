@@ -34,6 +34,10 @@ In order to verify that the sliding mode controller is stable, the energy of the
   <em>ASMC Design - Page 3</em>
 </p>
 
+## Adaptive Gain Term
+
+To overcome the limitations of a manually set gain, the gain of the sliding mode controller can be defined using an adaptive term, that increases at a rate tied to the norm 's' of the sliding surface (how far the system is from its point of stability) and decays over time to prevent the system from experiencing wind-up. The following equation ensures that the gain of the controller is bounded between two values, getting the best performance regardless of the current disturbance to the system.
+
 <p align="center">
   <img src="/Resources/ControlTheory4.png" width="500"/>
   <br/>
