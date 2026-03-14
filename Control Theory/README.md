@@ -2,6 +2,20 @@
 
 The at heart of the system is the Adaptive Sliding Mode Controller (ASMC). ASMC was chosen over traditional control methods due the requirements of fault-tolerance for the attitude control system.
 
+| Parameter | Description |
+|------------|-------------|
+| `s` | Sliding surface |
+| `lambda` | Sliding surface slope |
+| `q` | Quaternion angle |
+| `omega` | Rotational velocity |
+| `J` | Inertia matrix |
+| `tau` | Torque |
+| `sigma` | Leakage coefficient |
+| `Gamma` | Adaptive gain rate |
+| `K/ K_adaptive` | Switching gain |
+| `K_min` | Minimum switching gain |
+| `K_max` | Maximum switching gain |
+
 ## Passive VS Active Fault Isolation
 
 | Passive | Active |
