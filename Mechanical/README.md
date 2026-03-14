@@ -5,7 +5,7 @@ CAD files and design documentation for the reaction wheel assembly. All structur
 <p align="center">
   <img src="/Resources/Screenshot 2026-03-14 223014.png" width="500"/>
   <br/>
-  <em>Circuit Diagram of Electronics</em>
+  <em>CAD Model of full assembly</em>
 </p>
 
 ## Design overview
