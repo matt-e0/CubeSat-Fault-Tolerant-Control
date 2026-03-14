@@ -8,13 +8,13 @@ MATLAB and Simulink implementations of the Adaptive Sliding Mode Controller. All
 |------|-------------|
 | `ASMC_waypoints.m` | Main ASMC simulation — attitude regulation with waypoints, fault injection, and performance plots |
 | `ASMC_tracking.m` | MATLAB Function block implementation for Simulink integration |
-| `asmc_simulink.m` | Drop-in MATLAB Function block (3 inputs: `q`, `q_d`, `omega` → `tau_body`) |
-| `load_and_plot_log.m` | Loads SD card CSV logs from hardware and plots against simulation |
+| `cubesatVisualisation.m` | Render and plots of ASMC simulations, requiring the controller simulation and mesh files |
+| `meshes` | Mesh files used for 3D simulation renders |
 
 ## Running the simulation
 
 1. Open MATLAB (R2021a or later)
-2. Run `ASMC_waypoints.m` directly — no toolboxes required beyond base MATLAB
+2. Run `ASMC_waypoints.m` 
 3. Adjust parameters at the top of the file:
 
 ```matlab
@@ -67,9 +67,6 @@ Set `q_d` using a Constant block. Common values:
 | `K_min` | 0.01 | Minimum switching gain |
 | `K_max` | 2.0 | Maximum switching gain |
 
-## Comparing hardware logs to simulation
-
-After running the hardware, copy the SD card CSV (`log###.csv`) to this folder and run:
 
 ```matlab
 load_and_plot_log('log001.csv')
