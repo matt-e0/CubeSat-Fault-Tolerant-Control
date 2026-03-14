@@ -16,7 +16,7 @@ MATLAB and Simulink implementations of the Adaptive Sliding Mode Controller. All
 <p align="center">
   <img src="/Resources/SimulationPlot.gif"/>
   <br/>
-  <em>ASMC simulation — attitude tracking (180 degree)</em>
+  <em>ASMC simulation - attitude tracking (180 degree)</em>
 </p>
 
 1. Open MATLAB (R2021a or later)
@@ -74,9 +74,9 @@ load_and_plot_log('log001.csv')
 ```
 
 <p align="center">
-  <img src="/Resources/ControllerPlots.png"/>
+  <img src="/Resources/ControllerPlots.png" width="60%"/>
   <br/>
-  <em>ASMC simulation — attitude tracking (180 degree)</em>
+  <em>ASMC simulation - plots generated from MATLAB script</em>
 </p>
 
 Plots use the same axes and colour scheme as `ASMC_waypoints.m` for direct comparison.
