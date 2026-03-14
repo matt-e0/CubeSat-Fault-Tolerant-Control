@@ -19,11 +19,11 @@ The flywheel moment of inertia about its spin axis is estimated as:
 I_wheel = 0.5 * m * r²
 ```
 
-With mass ~20g and radius ~14mm this gives approximately `1.96×10⁻⁶ kg·m²`. This value is used in the Teensy controller for the torque-to-RPM conversion. Measure the actual wheel mass and radius and update `I_WHEEL` in `controller/main3.cpp` accordingly.
+With mass ~14g and radius ~27mm this gives approximately `5.37×10⁻⁶ kg·m²`. 
 
 ## Motor and encoder
 
-Each wheel uses a BLDC motor paired with a magnetic encoder. The encoder provides quadrature A/B signals to the STM32 B-G431B ESC for closed-loop speed control via Field Oriented Control (FOC).
+Each wheel uses a BLDC motor paired with an AS5047P magnetic encoder. The encoder provides quadrature A/B signals to the STM32 B-G431B ESC for closed-loop speed control via Field Oriented Control (FOC).
 
 ## Torque allocation matrix
 
