@@ -73,4 +73,10 @@ The simulation runs for 80 seconds, injecting wheel failures mid-run and logging
 load_and_plot_log('log001.csv')
 ```
 
+<p align="center">
+  <img src="/Resources/ControllerPlots.png"/>
+  <br/>
+  <em>ASMC simulation — attitude tracking (180 degree)</em>
+</p>
+
 Plots use the same axes and colour scheme as `ASMC_waypoints.m` for direct comparison.
