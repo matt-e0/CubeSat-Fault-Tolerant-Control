@@ -45,7 +45,7 @@ Reaction wheels generate torques by accelerating or decelerating flywheels, rota
 | Folder | Contents |
 |--------|----------|
 | [`Simulation/`](Simulation/) | MATLAB ASMC simulation, Simulink models, plotting scripts |
-| [`Firmware/`](Firmware/) | STM32 ESC firmware modifications (see license notice) |
+| [`Firmware/`](Firmware/) | STM32 ESC firmware modifications (Absent due to license agreement) |
 | [`Controller/`](Controller/) | Teensy 4.1 ASMC implementation |
 | [`Mechanical/`](Mechanical/) | CAD files, reaction wheel design |
 | [`Documents/`](Documents/) | Poster, reports, references |
