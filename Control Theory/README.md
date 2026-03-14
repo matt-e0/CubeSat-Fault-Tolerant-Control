@@ -1,6 +1,6 @@
 # Adaptive Sliding Mode Controller Design
 
-The at heart of the system is the Adaptive Sliding Mode Controller (ASMC). ASMC was chosen over traditional control methods due the requirement of fault-tolerance for the attitude control system.
+The at heart of the system is the Adaptive Sliding Mode Controller (ASMC). ASMC was chosen over traditional control methods due the requirements of fault-tolerance for the attitude control system.
 
 ## Passive VS Active Fault Isolation
 
@@ -10,6 +10,7 @@ The at heart of the system is the Adaptive Sliding Mode Controller (ASMC). ASMC 
 | Reduces processing load of microcontroller (no reaction wheel speed sensing or heavy matrix updates) | Can achieve a higher pointing accuracy during failures as feedback prevents overcompensation |
 | Independent of fault-detection architecture, no risk for false-positives | System doesn't try to power faulty motors |
 
+A passive fault-isolating control method was chosen as the project is aimed to integrate easily into existing satellite designs. The addition of a fault-detection and isolation program and the requirement for actuator feedback increases the complexity of the design and the load on the control electronics. The most promising passive controller is the ASMC, due to its high robustness and it's ability to linearise non-linear kinematics by defining a sliding surface.
 
 <p align="center">
   <img src="/Resources/ControlTheory1.png" width="500"/>
