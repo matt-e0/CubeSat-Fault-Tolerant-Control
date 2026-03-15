@@ -64,6 +64,8 @@ To overcome the limitations of a manually set gain, the gain of the sliding mode
   <em>ASMC Design - Page 5</em>
 </p>
 
-## Previous Designs
+## Previous Designs & Improvements
 
 Initially this project aimed to implement a PD controller coupled with a Fault-Detection and Isolation (FDI) program to redistribute torque based on the determined health of a reaction wheel. This was decided against as mentioned previously, a passive FDI method was preferred. After that some work on Linear Quadratic Control was explored, but never fully implemented. Both controller can be found in the log book data, with both being evaluated in Simulink using the URDF model under Mechanical. Both showed some promise but were scrapped in favour of ASMC. Furthermore, the Simulink model and URDF were evaluated and found to be unstable, causing most controllers to 'runaway' and fail. The simulation file abandoned as a result, and the design continued in MATLAB.
+
+Currently, large flaw with the implementation of this controller is that Euler integration is used to update K_adapt += K_adapt_dot * dt. This method provides a discretisation error, which may cause the system to deviate from the expected behaviour modelled above, since the Lyapunov proof is modelled in continuous time. Due to the controller running at 100Hz and the slow dynamics of the reaction wheels, this does not cause any issues in practice.
