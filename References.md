@@ -1,7 +1,5 @@
 # Project References & Design Basis
 
-This document chronicles the theoretical and technical foundations of the **CubeSat Fault-Tolerant Control (FTC)** system.
-
 ---
 
 ## Sliding Mode Control Theory + Kinematics
