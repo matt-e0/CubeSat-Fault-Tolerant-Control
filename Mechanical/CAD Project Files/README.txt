@@ -1,0 +1,1 @@
+These files are the original designs for this project, if you wish to use them please note their origin in your work and reference them properly. The files are messy so I recommend looking through them carefully if you're interested in them.
