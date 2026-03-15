@@ -64,6 +64,6 @@ To overcome the limitations of a manually set gain, the gain of the sliding mode
   <em>ASMC Design - Page 5</em>
 </p>
 
-# Previous Designs
+## Previous Designs
 
 Initially this project aimed to implement a PD controller coupled with a Fault-Detection and Isolation (FDI) program to redistribute torque based on the determined health of a reaction wheel. This was decided against as mentioned previously, a passive FDI method was preferred. After that some work on Linear Quadratic Control was explored, but never fully implemented. Both controller can be found in the log book data, with both being evaluated in Simulink using the URDF model under Mechanical. Both showed some promise but were scrapped in favour of ASMC. Furthermore, the Simulink model and URDF were evaluated and found to be unstable, causing most controllers to 'runaway' and fail. The simulation file abandoned as a result, and the design continued in MATLAB.
