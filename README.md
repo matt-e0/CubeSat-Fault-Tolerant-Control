@@ -27,10 +27,10 @@ Reaction wheels generate torques by accelerating or decelerating flywheels, rota
 
 ## Key Results
 
-- Attitude regulation within **5°** following sequential failure of two reaction wheels
+- Attitude regulation within 5° following failure of reaction wheel
 - Adaptive gain responds automatically to fault - no controller reconfiguration needed
 - Lyapunov-stable convergence demonstrated in simulation
-- Hardware: bidirectional ESC firmware implemented from scratch on STM32 B-G431B
+- Hardware: Motor integration using magnetic encoders and custom firmware
 
 <video src="Resources/BenchDemo.mp4" width="320" height="240" controls></video>
 
