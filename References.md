@@ -18,7 +18,7 @@
 
 [6] R. Valenzuela and J. Merino, “Spacecraft Dynamics, 2023/2024,” 2023. Accessed: Mar. 15, 2026. [Online]. Available: https://aero.us.es/dve/Apuntes/progDVE2324eng.pdf
 
-## LQR/LPV Controller
+## Old Controller Designs
 
 [7] F. Cipro, “CubeSat attitude and position control systems based on LPV and Sliding Mode methods,” 2019. Accessed: Mar. 15, 2026. [Online]. Available: https://webthesis.biblio.polito.it/14486/1/tesi.pdf
 
