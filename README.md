@@ -77,6 +77,3 @@ See the 'Simulation' folder for full implementation and results.
 ## Acknowledgements
 
 This project was completed as part of a BEng project at the University of Liverpool, School of Electrical Engineering. 
-
-#### Use of AI
-All design aspects and technical work of this project and validation were done by the author. AI (Claude, Anthropic) was used for the modification of STMicroelectronic Motor Control SDK to enable bidirectional control of the motor drivers. This decision was made to reduce the workload of the project, ensuring it was completed in time. Due to the license agreement of the MC SDK, modified firmware will not be shared in this project. All other components represent the authors own work.
