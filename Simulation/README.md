@@ -69,10 +69,6 @@ The simulation runs for 80 seconds, injecting wheel failures mid-run and logging
 | `K_max` | 2.0 | Maximum switching gain |
 
 
-```matlab
-load_and_plot_log('log001.csv')
-```
-
 <p align="center">
   <img src="/Resources/ControllerPlots.png" width="60%"/>
   <br/>
