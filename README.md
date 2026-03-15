@@ -40,7 +40,7 @@ Reaction wheels generate torques by accelerating or decelerating flywheels, rota
   <em>Simulink simulation - attitude tracking with PD controller baseline</em>
 </p>
 
-## Repository Structure
+## Contents
 
 | Folder | Contents |
 |--------|----------|
