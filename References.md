@@ -30,7 +30,7 @@
 
 ---
 
-## Traceability Log
+## Reference Log
 
 | Design Component | Reference Source |
 | :--- | :--- |
