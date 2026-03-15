@@ -54,3 +54,14 @@ A = [-0.5,  -0.5,   0.5,  0.5]   ← body X
 ```
 
 The pseudoinverse `A_pinv = pinv(A)` is precomputed and hardcoded in the Teensy controller. If the physical wheel arrangement differs from this geometry, recalculate `A` from the actual spin axis unit vectors and update `A_pinv` in `controller/main3.cpp`.
+
+## 3-Axis Gimbal Platform
+
+<p align="center">
+  <img src="/Resources/Screenshot 2026-02-17 081849.png" width="500"/>
+  <br/>
+  <em>CAD bearings in frame</em>
+</p>
+
+
+
