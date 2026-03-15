@@ -18,15 +18,18 @@
 
 [6] R. Valenzuela and J. Merino, “Spacecraft Dynamics, 2023/2024,” 2023. Accessed: Mar. 15, 2026. [Online]. Available: https://aero.us.es/dve/Apuntes/progDVE2324eng.pdf
 
+[7]
+bitcraze, “GitHub - bitcraze/crazyflie-firmware: The main firmware for the Crazyflie Nano Quadcopter, Crazyflie Bolt Quadcopter and Roadrunner Positioning Tag.,” GitHub, Jan. 21, 2026. https://github.com/bitcraze/crazyflie-firmware (accessed Mar. 15, 2026).
+
 ## Old Controller Designs
 
-[7] F. Cipro, “CubeSat attitude and position control systems based on LPV and Sliding Mode methods,” 2019. Accessed: Mar. 15, 2026. [Online]. Available: https://webthesis.biblio.polito.it/14486/1/tesi.pdf
+[8] F. Cipro, “CubeSat attitude and position control systems based on LPV and Sliding Mode methods,” 2019. Accessed: Mar. 15, 2026. [Online]. Available: https://webthesis.biblio.polito.it/14486/1/tesi.pdf
 
 ## CubeSat and Reaction Wheels
 
-[8] “NASA CubeSat/SmallSat Reference Model,” NASA Technical Reports Server. Accessed: Mar. 15, 2026. [Online]. Available: https://ntrs.nasa.gov/api/citations/20220009496/downloads/NASA%20CubeSat%20SmallSat%20Reference%20Model(PSAM).pdf
+[9] “NASA CubeSat/SmallSat Reference Model,” NASA Technical Reports Server. Accessed: Mar. 15, 2026. [Online]. Available: https://ntrs.nasa.gov/api/citations/20220009496/downloads/NASA%20CubeSat%20SmallSat%20Reference%20Model(PSAM).pdf
 
-[9] N. Bonafede, “LOW-COST REACTION WHEEL DESIGN FOR CUBESAT APPLICATIONS,” M.S. Thesis, California Polytechnic State University, 2020. [Online]. Available: https://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=3705&context=theses
+[10] N. Bonafede, “LOW-COST REACTION WHEEL DESIGN FOR CUBESAT APPLICATIONS,” M.S. Thesis, California Polytechnic State University, 2020. [Online]. Available: https://digitalcommons.calpoly.edu/cgi/viewcontent.cgi?article=3705&context=theses
 
 ---
 
