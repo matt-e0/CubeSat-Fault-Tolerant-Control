@@ -25,6 +25,8 @@ Reaction wheels generate torques by accelerating or decelerating flywheels, rota
   <em>Hardware Demo running with reaction wheels disabled - Live stream of controller on MCU</em>
 </p>
 
+A hardware prototype successfully dmonstrated the implementation of an Adaptive Sliding Mode Controller (ASMC), providing robust control on embedded hardware.
+
 <p align="center">
   <img src="Resources/1000038925.jpg" width="500"/>
   <br/>
