@@ -298,6 +298,23 @@ void runASMC() {
       tau[0], tau[1], tau[2]
     );
   }
+
+  /*
+  //  SD Card log (10Hz)
+  static int telem_count = 0;
+  if (++telem_count >= 10) {
+      telem_count = 0;
+      float err_deg = quatAngleError(&q, &q_d);
+      
+      // Log to Serial
+      //Serial.printf("err=%.2fdeg |s|=%.4f\n", err_deg, s_norm);
+      
+      // Log to SD Card
+      logSD(err_deg, s_norm, K_adapt, wheel_rpm);
+  }
+    
+  */
+
 }
 
 
@@ -436,7 +453,7 @@ void initSD() {
   }
 }
 
-void logTelemetry(float err, float s, float K, float* rpm) {
+void logSD(float err, float s, float K, float* rpm) {
   // Open the file in append mode
   dataFile = SD.open("datalog.csv", FILE_WRITE);
   
