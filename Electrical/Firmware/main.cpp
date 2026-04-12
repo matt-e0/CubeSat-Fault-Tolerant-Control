@@ -218,7 +218,7 @@ void runASMC() {
     q_e.z = -q_e.z;
   }
 
-  // Vector part: axis * sin(theta/2)
+  // Vector part
   float e_q[3]     = { q_e.x, q_e.y, q_e.z };
   float e_omega[3] = { omega[0], omega[1], omega[2] };  // omega_d = 0
 
