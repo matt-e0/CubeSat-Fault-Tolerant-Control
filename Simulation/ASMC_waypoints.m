@@ -36,7 +36,7 @@ K_adapt_init = 0.01;   % Initial adaptive gain
 Gamma        = 2.0;    % Adaptation rate
 sigma        = 0.015;  % Leakage coefficient
 K_min        = 0.01;   % Minimum switching gain (nominal stability floor)
-K_max        = 2.0;    % Maximum switching gain (actuator saturation ceiling)
+K_max        = 50.0;    % Maximum switching gain (actuator saturation ceiling)
 
 %  Initial Conditions
 ax0    = [1;1;1] / norm([1;1;1]);
