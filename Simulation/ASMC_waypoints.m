@@ -85,16 +85,16 @@ fprintf('Fault                  : Wheel %d fails at t = %.1f s (effectiveness %.
     fault_wheel, fault_time, fault_level*100);
 fprintf('Running...\n\n');
 
-% ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+% --------------------------------------------------------------------------------------------------------------
 %Simulation loop
 for i = 1:N
     t = time(i);
 
     % Fault injection
-    if t >= fault_time
-        wheel_effect(fault_wheel) = fault_level;
-        wheel_effect(2) = 0.2;
-    end
+    %if t >= fault_time
+    %    wheel_effect(fault_wheel) = fault_level;
+    %    wheel_effect(2) = 0.2;
+    %end
     
     % Update waypoint
     wp_idx = find(waypoint_times <= t, 1, 'last');
@@ -173,7 +173,7 @@ end
 
 fprintf('\n');
 
-%|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%-------------------------------------------------------------------------------------------------------------
 
 % performance report
 thresh      = 5.0;   % degrees
@@ -184,6 +184,13 @@ post_idx = time >= fault_time;
 
 fprintf('=== PERFORMANCE METRICS ===\n');
 if ~isempty(settled_idx)
+    if ~isempty(settled_idx) && settled_idx < N
+        max_overshoot = max(err_hist(settled_idx:end));
+    else
+        max_overshoot = max(err_hist); % Fallback if never settled
+    end
+    
+    fprintf('Maximum Overshoot       : %.4f deg\n', max_overshoot);
     if time(settled_idx) < fault_time
         fprintf('Settling time (<%g deg): %.2f s  [before fault]\n', thresh, time(settled_idx));
     else
@@ -217,7 +224,7 @@ if fault_time < t_final
     end
 end
 
-%||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+%-------------------------------------------------------------------------------------------
 % Graphs setup
 C = [0.8500 0.3250 0.0980;
      0.4660 0.6740 0.1880;
@@ -435,7 +442,7 @@ title('Quaternion Components');
 set(gca, 'FontSize', 10);
 
 
-%}||||||||||||||||||||||||
+%}
 
 % HELPER FUNCTIONS
 
