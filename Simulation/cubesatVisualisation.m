@@ -1,3 +1,11 @@
+% The logic for importing mesh files and applying 6-DOF
+% transformations follows standard MATLAB 3D animation patterns.
+% Reference for Mesh-to-Patch conversion and rotation matrices:
+%  MathWorks: "Introduction to Patch Objects" (MATLAB Documentation)
+%  Aerospace Blockset: "CubeSat Simulation Project" (Visualization Templates)
+%  CubeSat-Fault-Tolerant-Control (Matt-e0 GitHub repository)
+
+
 %  CUBESAT 3D VISUALISATION
 %  Must be run after simulation file
 
